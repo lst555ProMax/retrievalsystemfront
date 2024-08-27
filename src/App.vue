@@ -1,6 +1,16 @@
 <template>
-  <router-view/>
+  <div id="app">
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
+  </div>
 </template>
+
+<script>
+export default {
+  name: 'App'
+};
+</script>
 
 <style>
 #app {
@@ -11,16 +21,22 @@
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
+body {
+  background-color: #000; /* 设置为黑色 */
+  margin: 0;
+  padding: 0;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
   color: #2c3e50;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+/* 添加动画样式 */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
 }
 </style>

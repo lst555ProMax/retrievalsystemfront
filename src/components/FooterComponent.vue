@@ -3,7 +3,7 @@
       <p>&copy; 2024 跨模态图像文本检索系统</p>
     </div>
   </template>
-  
+  ``
   <script>
   export default {
     name: 'FooterComponent',
