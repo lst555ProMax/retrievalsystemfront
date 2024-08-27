@@ -1,4 +1,12 @@
 const { defineConfig } = require('@vue/cli-service')
-module.exports = defineConfig({
+/* module.exports = defineConfig({
   transpileDependencies: true
 })
+ */
+// vue.config.js
+module.exports = {
+  devServer: {
+    port: 3000, // 指定端口号
+  },
+};
+
